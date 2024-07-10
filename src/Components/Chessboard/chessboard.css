@@ -1,0 +1,160 @@
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    width: 800px;
+    height: 800px;
+    background-color: blue;
+}
+.layout {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.board {
+    display: grid;
+}
+
+.ranks {
+    color : #5e8d2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+.rank {
+    font-size: large;
+    font-weight: bold;
+}
+
+.files {
+    color: #5e8d2c;
+    height: 25px;
+    grid-column: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file {
+    font-size: large;
+    font-weight: bold;
+}
+
+.voice {
+    height: 800px;
+    width: 65px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+}
+
+.voice button {
+    height: 100%;
+    width: 100%;
+    background-color: #548026; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    transform-origin: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.voice button:hover {
+    background-color: #377d0e;
+    transform: rotate(-0deg) scale(1.01);
+}
+
+.voice button span {
+    transform: rotate(-90deg);
+    display: inline-block;
+}
+
+
+@media (max-width: 1140px) {
+    .layout {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .voice {
+        height: 50px;
+        width: 800px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .voice button:hover {
+        transform: rotate(0deg) scale(1.02);
+    }
+    .voice button span {
+        transform: rotate(0deg);
+    }
+    
+
+}    
+
+.modal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal > .modal-body {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 400px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    width: 800px;
+    background-color: rgba(127, 127, 127, 0.8);
+}
+
+.modal > .modal-body > img {
+    height: 120px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.modal > .modal-body > img:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.modal > .modal-body > .checkmate-body {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.modal > .modal-body > .checkmate-body > span {
+    font-size: 32px;
+}
+
+.modal > .modal-body > .checkmate-body > button {
+    background-color: #779556;
+    border: none;
+    border-radius: 8px;
+    padding: 24px 48px;
+    font-size: 32px;
+    color: white;
+}
+
+.modal > .modal-body > .checkmate-body > button:hover {
+    cursor: pointer;
+}

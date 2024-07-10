@@ -1,0 +1,80 @@
+.logbook {
+    height: 780px;
+    max-width: 300px;
+    overflow-y: auto;
+    border: 1px solid #709646;
+    border-radius: 8px;
+    background-color: #202020;
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  .logbook table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .logbook th,
+  .logbook td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .logbook thead {
+    background-color: #202020;
+  }
+
+  .logbook thead th {
+    position: sticky;
+    top: 0;
+    background-color: #111111;
+    color: #5c8e27; 
+    z-index: 1;
+  }
+
+  #moveno {
+    text-align: center;
+  }
+  
+  .logbook tbody tr:nth-child(even) {
+    background-color: #202020;
+    color: #5c8e27
+  }
+  
+  .logbook tbody tr:nth-child(odd) {
+    background-color: #303030;
+    color: #5c8e27
+  }
+
+  @media (max-width: 1140px) {
+    .logbook {
+        margin: 10px;
+        width: 100%;
+        max-width: 780px;
+    }
+}
+  
+  /* Custom scrollbar styles */
+  .logbook::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  .logbook::-webkit-scrollbar-track {
+    background: #202020;
+    border-radius: 8px;
+  }
+  
+  .logbook::-webkit-scrollbar-thumb {
+    background-color: #779556;
+    border-radius: 8px;
+    border: 3px solid gray;
+    opacity: 1;
+  }
+  
+  .logbook::-webkit-scrollbar-thumb:hover {
+    background-color: #709646;
+  }
+
+  
+  
