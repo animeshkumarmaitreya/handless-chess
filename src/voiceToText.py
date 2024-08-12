@@ -28,7 +28,11 @@ def recognize_and_struct_chess_move():
             "queen": "queen",
             "rook": "rook",
             "bishop": "bishop",
-            "pawn": "pawn"
+            "pawn": "pawn",
+            "porn": "pawn",
+            "kim": "king",
+            "light": "knight",
+            "pawan": "pawn"
         }
         return misinterpretations.get(word, word)
 
